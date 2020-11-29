@@ -1,4 +1,4 @@
-# tmplate
+# template
 
 Go の標準ライブラリにはテンプレートには`text/template`と`html/template`がある。
 
