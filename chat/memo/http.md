@@ -1,6 +1,6 @@
-## http
+# http
 
-### http.Handler
+## http.Handler
 
 ServeHTTP 関数を持つインタフェース。ServeHTTP は HTTP リクエストを受け取りレスポンスを返すことが責務。
 
@@ -10,7 +10,7 @@ type Handler interface {
 }
 ```
 
-### http.Handle
+## http.Handle
 
 URL と URL に対応する`http.Handler`を`DefaultServeMux`に登録する関数。
 
@@ -26,7 +26,7 @@ func Handle(pattern string, handler Handler) {
 http.Handle("/any/", anyHandler)
 ```
 
-### http.HandlerFunc
+## http.HandlerFunc
 
 func(ResponseWriter, \*Request) の別名の型で ServeHTTP 関数を持つので、関数を定義して http.HandlerFunc にキャストするだけで構造体を宣言することなく http.Handler を用意することができる。
 
@@ -53,7 +53,7 @@ myHandler := http.HandlerFunc(
 http.Handle("/any/", myHandler)
 ```
 
-### http.HandleFunc
+## http.HandleFunc
 
 `http.Handle`の使いやすいバージョン。内部で`http.HandleFunc`にキャストしてくれるため、関数を渡すだけで良い。
 
